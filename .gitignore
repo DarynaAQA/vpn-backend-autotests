@@ -1,0 +1,8 @@
+.idea/
+__pycache__/
+venv/
+.pytest_cache/
+assets
+report.html
+.env
+.DS_Store
