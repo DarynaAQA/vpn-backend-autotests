@@ -52,7 +52,7 @@ Running tests with report generation
   ```
 
 ## Contact
-If you still have some questions, please ask them in my Slack profile - [Darina Bannik](https://planetvpn.slack.com/team/U03LV5XPYCX) 🙌
+If you still have some questions, please ask them in my Slack profile - [Darina Bannik]() 🙌
 
 
 

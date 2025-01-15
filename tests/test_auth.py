@@ -23,7 +23,7 @@ class TestAuth:
         """
         date_registration = datetime.datetime.now().strftime("%d%m%Y%H%M")
         registration = requests.post(f"{os.getenv("PROTOCOL")}{os.getenv("DOMAIN")}/register", data={
-            "email": f"darina.planetvpn-test{date_registration}@gmail.com"
+            "email": f"darina.test{date_registration}@gmail.com"
         })
         check_register = registration.json()
         data = check_register.get("data").get("token")
@@ -183,7 +183,7 @@ class TestAuth:
         }
         date_registration = datetime.datetime.now().strftime("%d%m%Y%H%M")
         registration = requests.post(f"{os.getenv("PROTOCOL")}{os.getenv("DOMAIN")}/register", data={
-            "email": f"darina.planetvpn-test{date_registration}@gmail.com"}, headers=headers)
+            "email": f"darina.test{date_registration}@gmail.com"}, headers=headers)
         check_register = registration.json()
         token = check_register.get("data").get("token")
         decoded_payload = jwt.decode(token, options={"verify_signature": False})
