@@ -2,7 +2,7 @@
 # from base_classes.qase_integration import QaseMethods
 # from datetime import datetime
 # import datetime
-import os
+# import os
 
 
 # @pytest.fixture(scope='session')
@@ -37,7 +37,7 @@ import os
 #     trimmed_time = str(result).split('.')[0]
 #     # debug_channel = "#qa-qase-results-debug"
 #     release_channel = "#qa-qase-results-release"
-    # qase_run.send_run_to_slack(slack_channel=release_channel, public_test_run_url=url, test_time=trimmed_time)
+#     qase_run.send_run_to_slack(slack_channel=release_channel, public_test_run_url=url, test_time=trimmed_time)
 
 
 
