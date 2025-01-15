@@ -97,9 +97,9 @@ class QaseMethods:
         headers = {
             "content-type": "application/json"
         }
-        # slack_url = os.getenv("SLACK_URL")
-        # response = requests.post(slack_url, json=payload, headers=headers)
-        # return response.status_code
+        slack_url = os.getenv("SLACK_URL")
+        response = requests.post(slack_url, json=payload, headers=headers)
+        return response.status_code
 
 
 

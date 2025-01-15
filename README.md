@@ -1,4 +1,4 @@
-# Planet VPN Backend Tests
+# VPN Backend Tests
 
 ## Technology Stack
 This section lists all the core frameworks/libraries used to this project:
@@ -14,13 +14,13 @@ This section lists all the core frameworks/libraries used to this project:
   ```
 
 ## Steps to launch of tests:
-1. Clone the repository with backend tests https://git.planetvpn.org/freevpnplanet/qa/planet-vpn-backend-tests
+1. Clone the repository with backend tests 
 ```sh
   git clone {repo link}
   ```
 2. Go to the project root folder
 ```sh
-  cd /planet-vpn-backend-tests
+  cd /vpn-backend-autotests
   ```
 3. Create virtual environment by command
 ```sh

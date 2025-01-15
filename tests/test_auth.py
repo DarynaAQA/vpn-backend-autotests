@@ -185,16 +185,13 @@ class TestAuth:
         registration = requests.post(f"{os.getenv("PROTOCOL")}{os.getenv("DOMAIN")}/register", data={
             "email": f"darina.planetvpn-test{date_registration}@gmail.com"}, headers=headers)
         check_register = registration.json()
-        print(check_register)
         token = check_register.get("data").get("token")
         decoded_payload = jwt.decode(token, options={"verify_signature": False})
-        print(decoded_payload)
         id = decoded_payload.get("sub")
-        print(id)
         headers.setdefault("Authorization", f"Bearer {DataIn.token}")
-        delete_user = requests.delete(f"{os.getenv("PROTOCOL")}{os.getenv("DOMAIN")}/test/user/{id}", headers=headers)
+        delete_user = requests.delete(f"{os.getenv("PROTOCOL")}{os.getenv("DOMAIN")}/test/user/{id}",
+                                      headers=headers)
         delete_user_data = delete_user.json()
-        print(delete_user_data)
         data = delete_user_data.get("success")
         assert delete_user.status_code == 200
         assert data == True

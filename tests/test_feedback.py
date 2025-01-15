@@ -189,7 +189,7 @@ class TestFeedback:
                 "country": "Ukraine",
                 "detail": "TEST",
                 "platform": f"{platform}",
-                "locale": "ru"
+                "locale": "ua"
 
             })
             create_feedback = post_create_feedback.json()
@@ -221,7 +221,7 @@ class TestFeedback:
                 "country": "Ukraine",
                 "detail": "TEST",
                 "platform": f"{platform}",
-                "locale": "ru"
+                "locale": "ua"
 
             })
             create_feedback_uninstall = post_create_feedback.json()
@@ -253,7 +253,7 @@ class TestFeedback:
                 "country": "Ukraine",
                 "detail": "TEST",
                 "platform": f"{platform}",
-                "locale": "ru",
+                "locale": "ua",
                 "domain": "xxx.xx2"
             })
             create_feedback = post_create_feedback.json()
@@ -285,7 +285,7 @@ class TestFeedback:
                 "country": "Ukraine",
                 "detail": "TEST",
                 "platform": f"{platform}",
-                "locale": "ru",
+                "locale": "ua",
                 "domain": "xxx.xx2"
             })
             create_feedback_uninstall = post_create_feedback.json()
@@ -310,7 +310,7 @@ class TestFeedback:
             "reasons[]": 6,
             "source": "feedback",
             "country": "Ukraine",
-            "locale": "ru",
+            "locale": "ua",
             "detail": "TEST",
             "domain": "xxx.xx2",
         }
@@ -337,7 +337,7 @@ class TestFeedback:
             "reasons": [10],
             "source": "feedback",
             "country": "Ukraine",
-            "locale": "ru",
+            "locale": "ua",
             "detail": "TEST",
             "domain": "xxx.xx2",
         }
@@ -365,7 +365,7 @@ class TestFeedback:
             "reasons[]": 5,
             "source": "uninstall",
             "country": "Ukraine",
-            "locale": "ru",
+            "locale": "ua",
             "detail": "TEST",
             "domain": "xxx.xx2",
         }

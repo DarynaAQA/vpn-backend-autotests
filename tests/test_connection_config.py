@@ -326,12 +326,10 @@ class TestConnectionConfig:
             "Content-Type": "application/json",
             "Accept": "application/json"
         }
-        get_connection_config = requests.get(f"{os.getenv("PROTOCOL")}{os.getenv("DOMAIN")}/v1/network/connection/config"
-                                                f"?nodes_pool_id=126", headers=headers)
+        get_connection_config = requests.get(f"{os.getenv("PROTOCOL")}{os.getenv("DOMAIN")}/v1/network/connection/"
+                                             f"config?nodes_pool_id=126", headers=headers)
         connection_config = get_connection_config.json()
-        print(connection_config)
         decrypted_data = decrypt_method.decrypt_from_api(connection_config.get("payload"), "v1_lite")
-        print(decrypted_data)
         data = decrypted_data.get("result")
         assert get_connection_config.status_code == 200
         assert len(data) > 0
@@ -561,8 +559,8 @@ class TestConnectionConfig:
             "Content-Type": "application/json",
             "Accept": "application/json"
         }
-        get_connection_config = requests.get(f"{os.getenv("PROTOCOL")}{os.getenv("DOMAIN")}/v1/optimized/connection/config"
-                                                f"?nodes_pool_id=3&platform={platform}", headers=headers)
+        get_connection_config = requests.get(f"{os.getenv("PROTOCOL")}{os.getenv("DOMAIN")}/v1/optimized/"
+                                             f"connection/config?nodes_pool_id=3&platform={platform}", headers=headers)
         connection_config_json = get_connection_config.json()
         payload = connection_config_json["payload"]
         decrypted_date = base_methods.decrypt_payload(service="default", payload=payload)

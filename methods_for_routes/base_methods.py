@@ -88,7 +88,8 @@ class AvailabilityRoutes:
         return total_seconds
 
     def decrypt_payload(self, payload, service):
-        decrypt_payload = requests.post("https://crm.planetvpn.org/api/v1/tools/encryption", data={
+        url = os.getenv("URL_ENCRYPTION")
+        decrypt_payload = requests.post(url=url, data={
             "service": f"{service}",
             "payload": f"{payload}",
             "decrypt": 1

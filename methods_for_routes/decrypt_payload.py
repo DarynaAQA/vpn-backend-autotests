@@ -6,6 +6,7 @@ import requests
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import unpad
 from dotenv import load_dotenv
+load_dotenv()
 
 
 class DecryptData:
@@ -41,7 +42,7 @@ class DecryptData:
         return decrypted_message
 
     def decrypt_from_api(self, payload: str, service_key: str) -> str:
-        url = "https://crm.planetvpn.org/api/v1/tools/encryption"
+        url = os.getenv("URL_ENCRYPTION")
         form_data = {"service": service_key, "payload": payload, "decrypt": "1"}
         response = requests.post(url, data=form_data)
         response_json = response.json()
