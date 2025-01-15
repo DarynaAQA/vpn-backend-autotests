@@ -2,6 +2,7 @@
 # from base_classes.qase_integration import QaseMethods
 # from datetime import datetime
 # import datetime
+import os
 
 
 # @pytest.fixture(scope='session')
@@ -39,24 +40,6 @@
     # qase_run.send_run_to_slack(slack_channel=release_channel, public_test_run_url=url, test_time=trimmed_time)
 
 
-# def pytest_add_option(parser):
-#     parser.addoption("--testing_environment", type=str, action='store',
-#                      help="Please choose testing environment: --testing_environment 'prod' or 'preprod'")
-
-# @pytest.fixture(scope="session", autouse=True)
-# def testing_environment(request):
-#     return request.config.getoption("--testing_environment")
-
-# @pytest.fixture(scope="session", autouse=True)
-# def it(testing_environment):
-#     if testing_environment == "prod":
-#         with open(".env", 'a') as env_file:
-#             env_file.write('\n')
-#             env_file.write(f'KEY="lNPQHj5MS7Z81ocu4r3Iq6hQFPu0EcLRAcejIOFfRGg="')
-#     elif testing_environment == "preprod":
-#         with open(".env", 'a') as env_file:
-#             env_file.write('\n')
-#             env_file.write(f'KEY="i22C4Mwfg0CY5PW8pfqsuX060Ww6EmWjIy3oolqeyaQ="')
 
 
 
